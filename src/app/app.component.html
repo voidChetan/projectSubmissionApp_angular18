@@ -1,0 +1,137 @@
+<div class="banner">
+  <img src="./projects era.png" style="width: 100%;" alt="">
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-8 text-center">
+          <h2>College Project Submission Form</h2> 
+      </div>
+      <div class="col-4 text-end"> 
+          <button type="button" class="btn btn-secondary">Reset</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+  </div>
+ 
+  <div class="row">
+      <div class="col-8">
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-7">
+                          <label for="studentName">Student Name:</label>
+                          <input type="text" class="form-control" id="studentName" name="studentName" required>
+                      </div> 
+                  </div>
+                  <div class="row">
+                      <div class="col-6">
+                          <label for="studentName">Contact No:</label>
+                          <input type="text" class="form-control" id="studentName" name="studentName" required>
+                      </div>
+                      <div class="col-6">
+                          <label for="studentName">Email Id:</label>
+                          <input type="text" class="form-control" id="studentName" name="studentName" required>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card mt-2">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-4">
+                          <label for="">Project Title</label>
+                          <input  type="text"  class="form-control"/>
+                      </div>
+                      <div class="col-4">
+                          <label for="">Start Date</label>
+                          <input  type="date"  class="form-control"/>
+                      </div>
+                      <div class="col-4">
+                          <label for="">End Date </label>
+                          <input  type="date"  class="form-control"/>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-6">
+                          <label for="department">Department:</label>
+                          <select class="form-control" id="department" name="department" onchange="populateCourses()" required>
+                              <option value="">Select Department</option>
+                              <option value="cs">Computer Science</option>
+                              <option value="ee">Electrical Engineering</option>
+                              <option value="me">Mechanical Engineering</option>
+                          </select>
+                      </div>
+                      <div class="col-6">
+                          <label for="course">Course:</label>
+                          <select class="form-control" id="course" name="course" required>
+                              <option value="">Select Course</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="form-group pt-2">
+                      <label for="projectDescription"> Technologies :</label>
+                      <textarea class="form-control" id="projectDescription" name="projectDescription" rows="2"
+                      required></textarea>
+                  </div>
+                  <div class="row">
+                      <div class="col-3">
+                          <label for="">Is Synopsis Submitted </label>
+                          <input type="checkbox" name="" id="">
+                      </div>
+                      <div class="col-3">
+                          <label for="">Date Of Submission</label>
+                          <input type="date" name="" id="">
+                      </div>
+                  </div>
+                 
+                 
+                 
+      
+                  <!-- Textarea for Project Description -->
+                  <div class="form-group">
+                      <label for="projectDescription">Project Description:</label>
+                      <textarea class="form-control" id="projectDescription" name="projectDescription" rows="4"
+                          required></textarea>
+                  </div>
+              </div>
+          </div>
+        
+         
+
+      </div>
+      <div class="col-4">
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-8">
+                          <div class="form-group">
+                              <label for="groupProject">Is this a group project?</label>
+                              <input type="checkbox" id="groupProject" name="groupProject" onchange="toggleGroupMembers()">
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <button class="btn btn-sm btn-success">  Add More <span class="fa fa-plus"></span></button>
+                        
+                      </div>
+                  </div>
+                 
+                  <div class="row">
+                      <div class="col-6">
+                          <input type="text" placeholder="Group Member 1" class="form-control">
+                      </div>
+                      <div class="col-6">
+                          <input type="text" placeholder="Group Member 2" class="form-control">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12  text-end">
+                       
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+ 
+</div>

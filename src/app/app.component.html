@@ -1,137 +1,61 @@
-<div class="banner">
-  <img src="./projects era.png" style="width: 100%;" alt="">
+<div style="display: flex;">
+    <div style="display: inline-block;width: 15%;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark vh-100" >
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              <span class="fs-4">Sidebar</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a routerLink="/project-list" class="nav-link active" aria-current="page">
+                  <i class="fa fa-home"></i>
+                  Project List
+                </a>
+              </li>
+              <li>
+                <a routerLink="/new-project" class="nav-link text-white">
+                  <i class="fa fa-user"></i>
+                 New Project
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+    </div>
+    <div style="display: inline-block;width: 85%;">
+        <router-outlet></router-outlet>
+    </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-      <div class="col-8 text-center">
-          <h2>College Project Submission Form</h2> 
-      </div>
-      <div class="col-4 text-end"> 
-          <button type="button" class="btn btn-secondary">Reset</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-  </div>
- 
-  <div class="row">
-      <div class="col-8">
-          <div class="card">
-              <div class="card-body">
-                  <div class="row">
-                      <div class="col-7">
-                          <label for="studentName">Student Name:</label>
-                          <input type="text" class="form-control" id="studentName" name="studentName" required>
-                      </div> 
-                  </div>
-                  <div class="row">
-                      <div class="col-6">
-                          <label for="studentName">Contact No:</label>
-                          <input type="text" class="form-control" id="studentName" name="studentName" required>
-                      </div>
-                      <div class="col-6">
-                          <label for="studentName">Email Id:</label>
-                          <input type="text" class="form-control" id="studentName" name="studentName" required>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="card mt-2">
-              <div class="card-body">
-                  <div class="row">
-                      <div class="col-4">
-                          <label for="">Project Title</label>
-                          <input  type="text"  class="form-control"/>
-                      </div>
-                      <div class="col-4">
-                          <label for="">Start Date</label>
-                          <input  type="date"  class="form-control"/>
-                      </div>
-                      <div class="col-4">
-                          <label for="">End Date </label>
-                          <input  type="date"  class="form-control"/>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-6">
-                          <label for="department">Department:</label>
-                          <select class="form-control" id="department" name="department" onchange="populateCourses()" required>
-                              <option value="">Select Department</option>
-                              <option value="cs">Computer Science</option>
-                              <option value="ee">Electrical Engineering</option>
-                              <option value="me">Mechanical Engineering</option>
-                          </select>
-                      </div>
-                      <div class="col-6">
-                          <label for="course">Course:</label>
-                          <select class="form-control" id="course" name="course" required>
-                              <option value="">Select Course</option>
-                          </select>
-                      </div>
-                  </div>
-                  <div class="form-group pt-2">
-                      <label for="projectDescription"> Technologies :</label>
-                      <textarea class="form-control" id="projectDescription" name="projectDescription" rows="2"
-                      required></textarea>
-                  </div>
-                  <div class="row">
-                      <div class="col-3">
-                          <label for="">Is Synopsis Submitted </label>
-                          <input type="checkbox" name="" id="">
-                      </div>
-                      <div class="col-3">
-                          <label for="">Date Of Submission</label>
-                          <input type="date" name="" id="">
-                      </div>
-                  </div>
-                 
-                 
-                 
-      
-                  <!-- Textarea for Project Description -->
-                  <div class="form-group">
-                      <label for="projectDescription">Project Description:</label>
-                      <textarea class="form-control" id="projectDescription" name="projectDescription" rows="4"
-                          required></textarea>
-                  </div>
-              </div>
-          </div>
-        
-         
-
-      </div>
-      <div class="col-4">
-          <div class="card">
-              <div class="card-body">
-                  <div class="row">
-                      <div class="col-8">
-                          <div class="form-group">
-                              <label for="groupProject">Is this a group project?</label>
-                              <input type="checkbox" id="groupProject" name="groupProject" onchange="toggleGroupMembers()">
-                          </div>
-                      </div>
-                      <div class="col-4">
-                          <button class="btn btn-sm btn-success">  Add More <span class="fa fa-plus"></span></button>
-                        
-                      </div>
-                  </div>
-                 
-                  <div class="row">
-                      <div class="col-6">
-                          <input type="text" placeholder="Group Member 1" class="form-control">
-                      </div>
-                      <div class="col-6">
-                          <input type="text" placeholder="Group Member 2" class="form-control">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-12  text-end">
-                       
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-      </div>
-  </div>
- 
-</div>
